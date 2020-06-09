@@ -121,7 +121,7 @@ const AcademicInfoForm = ({handleFormDataComplete, handleBack, data}) => {
                                                 rules={[{ required: true }]}
                                                 style={{ display: 'inline-block', width: 'calc(30% - 8px)', margin: '0 8px' }}
                                             >
-                                                <DatePicker placeholder="Year" onChange={onChange} picker="year"  disabledDate={d => !d || d.isAfter(moment().format('YYYY-MM-DD')) || d.isSameOrBefore("12/31/1970") } defaultPickerValue={moment("31/12/2002", 'DD/MM/YYYY')}  />
+                                                <DatePicker placeholder="Year" picker="year"  disabledDate={d => !d || d.isAfter(moment().format('YYYY-MM-DD')) || d.isSameOrBefore("12/31/1970") } defaultPickerValue={moment("31/12/2002", 'DD/MM/YYYY')}  />
                                             </Form.Item>
                                         </Form.Item>
                                         <Form.Item  {...formItemLayoutWithOutLabel} style={{ marginBottom: 0 }} className="academic-school">
@@ -207,7 +207,7 @@ const AcademicInfoForm = ({handleFormDataComplete, handleBack, data}) => {
                                                 rules={[{ required: true }]}
                                                 style={{ display: 'inline-block', width: 'calc(30% - 8px)', margin: '0 8px' }}
                                             >
-                                                <DatePicker placeholder="Year" onChange={onChange} picker="year"  disabledDate={d => !d || d.isAfter(moment().format('YYYY-MM-DD')) || d.isSameOrBefore("12/31/1970") } defaultPickerValue={moment("31/12/2002", 'DD/MM/YYYY')}  />
+                                                <DatePicker placeholder="Year" picker="year"  disabledDate={d => !d || d.isAfter(moment().format('YYYY-MM-DD')) || d.isSameOrBefore("12/31/1970") } defaultPickerValue={moment("31/12/2002", 'DD/MM/YYYY')}  />
                                             </Form.Item>
                                         </Form.Item>
                                         <Form.Item  {...formItemLayoutWithOutLabel} style={{ marginBottom: 0 }} className="academic-school">
