@@ -69,7 +69,6 @@ const AcademicInfoForm = ({handleFormDataComplete, handleBack, data}) => {
         fileList = fileList.slice(-1);
         
         fileList = fileList.map(function(file){
-            console.log('file', file.size);
             if(file.size >= 1000000){
                 message.error(`${e.file.name} size is bigger than 10mb.`);
             }
@@ -82,34 +81,12 @@ const AcademicInfoForm = ({handleFormDataComplete, handleBack, data}) => {
         }
         return e && e.fileList;
       };
-      const normFilePayment = e => {
-        let fileList = e.fileList;
-        fileList = fileList.slice(-1);
-        
-        fileList = fileList.map(function(file){
-            console.log('file', file.size);
-            if(file.size >= 1000000){
-                message.error(`${e.file.name} size is bigger than 10mb.`);
-            }
-            return file;
-        });
-        setStatePayment(fileList);
-
-        if (Array.isArray(e)) {
-          return e;
-        }
-        return e && e.fileList;
-      };
-
+  
       const formItemLayout = {
         labelCol: { span: 8 },
         wrapperCol: { span: 24}
       };
-      function onChange(date, dateString) {
-          console.log(moment().format('YYYY-MM-DD'))
-        //   2019-12-31
-        console.log(date, dateString);
-      }
+    
       const formItemLayoutWithOutLabel = {
         wrapperCol: {
           xs: { span: 16, offset: 0 },
@@ -193,7 +170,6 @@ const AcademicInfoForm = ({handleFormDataComplete, handleBack, data}) => {
                                         type="default"
                                         className="add-field"
                                         onClick={() => {
-                                            console.log(fields)
                                             fields.length >=4 ? message.error(`You can only add upto 4 degrees.`) : add();
                                         }}>
                                         <PlusOutlined />Add Other Academic Qualifications
@@ -271,7 +247,6 @@ const AcademicInfoForm = ({handleFormDataComplete, handleBack, data}) => {
                                         type="default"
                                         className="add-field"
                                         onClick={() => {
-                                            console.log(fields)
                                             fields.length >=2 ? message.error(`You can only add upto 2 English Language Qualifications.`) : add();
                                         }}>
                                         <PlusOutlined />Add Other English Language Qualifications

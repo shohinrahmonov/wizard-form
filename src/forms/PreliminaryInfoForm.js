@@ -48,7 +48,6 @@ const PrelimnaryInfoForm = ({handleFormDataComplete, handleBack, data}) => {
         fileList = fileList.slice(-1);
         
         fileList = fileList.map(function(file){
-            console.log('file', file.size);
             if(file.size >= 1000000){
                 message.error(`${e.file.name} size is bigger than 10mb.`);
             }

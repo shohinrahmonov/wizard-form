@@ -20,7 +20,6 @@ const layout = {
         const [form] = Form.useForm();
 
         const onFinish = values => {
-            console.log(values);
             history.push('/');
         };
         

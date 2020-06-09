@@ -50,7 +50,6 @@ const Form = () => {
     }
 
     const [toggle, setToggle] = useState(false);
-    console.log(state);
     return ( 
         <>
             <Modal open={toggle} />

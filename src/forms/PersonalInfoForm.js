@@ -23,8 +23,6 @@ const PersonalInfoForm = ({handleFormDataComplete, data}) => {
                 const obj = {};
                 obj[key] = dataIWantToFillFormWithEng[key] || null;
                 form.setFieldsValue(obj)
-                console.log(obj);
-                
             });
             data && data.map(item=>{form.setFieldsValue(item)});
             form.setFieldsValue({
@@ -34,7 +32,6 @@ const PersonalInfoForm = ({handleFormDataComplete, data}) => {
     }, [form]);
     
       const onFinish = values => {
-        console.log(values);
         handleFormDataComplete(1, values);
       };
     
@@ -172,7 +169,6 @@ const PersonalInfoForm = ({handleFormDataComplete, data}) => {
                                 type="default"
                                 className="delete-button"
                                 onClick={() => {
-                                    console.log(field)
                                     remove(field.name);
                                 }}
                                 style={{ marginLeft: '8px' }}
